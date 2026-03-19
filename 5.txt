@@ -1,0 +1,97 @@
+Mỗi Agent Đi Kèm Bộ Kỹ Năng Chuyên Sâu
+Đã Đóng Gói, Sẵn Sàng Chạy
+5 Agent + 15 Expert Skills + Workflows
+Nếu Agent là “nhân viên”…
+
+Thì Expert Skills chính là “kỹ năng chuyên môn” của nhân viên đó.
+
+Ví dụ: Bạn thuê một nhân viên content.
+
+Nhưng nếu họ không biết viết cấu trúc hấp dẫn? Không biết phân tích insight khách hàng? Không biết phễu bán hàng?
+
+Thuê cũng như không.
+
+Skills chính là những kỹ năng cụ thể mà mỗi Agent đã được “đào tạo” để thực thi chuyên sâu.
+
+Còn Workflows?
+
+Đó là “quy trình làm việc” — giống SOP của một công ty.
+
+Thay vì bạn hướng dẫn từng bước — workflow đã định sẵn:
+
+Input gì → xử lý thế nào → output ra sao.
+
+Agent nhận việc và chạy theo quy trình. Không cần bạn cầm tay chỉ việc.
+
+Và Frameworks?
+
+Đó là “khung tư duy” đã được kiểm chứng.
+
+AIDA cho viết copy. Value Ladder cho thiết kế offer. RFM cho phân tích khách hàng.
+
+Agent không “sáng tạo bừa” — nó làm theo framework đã được chứng minh hiệu quả.
+
+Tóm lại?
+
+Bạn không chỉ nhận 5 Agent.
+
+Bạn nhận 5 nhân viên + kỹ năng chuyên môn + quy trình + khung tư duy.
+
+Tất cả đã đóng gói sẵn. Chỉ cần kích hoạt và để Agent làm việc.
+
+AGENT 1
+Offer Agent Skills
+Market Research Workflow
+Quy trình nghiên cứu thị trường, từ khóa, ngách tiềm năng.
+
+Competitor Analysis Skill
+Phân tích đối thủ, tìm khoảng trống thị trường.
+
+Offer Packaging Framework
+Công thức đóng gói offer hấp dẫn, khó từ chối.
+
+AGENT 2
+Attraction Agent Skills
+Funnel Architecture Workflow
+Thiết kế & tối ưu phễu bán hàng từ A-Z.
+
+Content Creation Skill
+Viết blog, social post, video script thu hút.
+
+Lead Magnet Builder
+Tạo lead magnet & landing page chuyển đổi cao.
+
+AGENT 3
+Conversion Agent Skills
+Sales Page Builder
+Thiết kế Sales Page chuyển đổi cao theo công thức.
+
+Copywriting Skill
+Viết copy trình bày offer & value stack thuyết phục.
+
+Objection Handler
+Tạo FAQ xử lý câu hỏi & phản đối của khách hàng.
+
+AGENT 4
+Deliver Agent Skills
+Payment Integration Workflow
+Kết nối cổng thanh toán tự động (SePay, VNPay...).
+
+Order Notification Skill
+Thông báo Leads & đơn hàng real-time về Group.
+
+Auto Delivery System
+Tự động gửi sản phẩm sau khi thanh toán thành công.
+
+AGENT 5
+Insights Agent Skills
+Social Analytics Skill
+Phân tích Social Insights (reach, engagement...).
+
+Revenue Report Workflow
+Report đơn hàng & doanh thu định kỳ.
+
+Optimization Advisor
+Đề xuất action & phương án cải thiện dựa trên số liệu.
+
+SỞ HỮU AI Agent Business NGAY
