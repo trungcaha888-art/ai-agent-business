@@ -1040,6 +1040,68 @@
   <!-- ════════════════════════════════════════════
        SCRIPTS
        ════════════════════════════════════════════ -->
+  <!-- ════════════════════════════════════════════
+       BANK TRANSFER MODAL
+       ════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="bankModalOverlay">
+    <div class="modal-card bank-modal-card">
+      <button class="modal-close" id="bankModalClose">&times;</button>
+      <div class="bank-modal-body">
+        <div class="bank-modal-header">
+          <span class="bank-modal-icon">✅</span>
+          <h3>Đăng ký thành công!</h3>
+          <p>Cảm ơn bạn đã tin tưởng sở hữu AI Agent Business.<br>Hãy thực hiện chuyển khoản để kích hoạt tài khoản:</p>
+        </div>
+        <div class="bank-modal-content">
+          <div class="bank-modal-info">
+            <div class="bank-modal-row">
+              <span class="bank-modal-label">Tên tài khoản:</span>
+              <span class="bank-modal-value">NGUYEN THANH TRUNG</span>
+            </div>
+            <div class="bank-modal-row">
+              <span class="bank-modal-label">Ngân hàng:</span>
+              <span class="bank-modal-value">MSB</span>
+            </div>
+            <div class="bank-modal-row">
+              <span class="bank-modal-label">Số tài khoản:</span>
+              <span class="bank-modal-value bank-modal-account" id="modalAccountNumber">03001017825423</span>
+            </div>
+            <div class="bank-modal-row">
+              <span class="bank-modal-label">Số tiền:</span>
+              <span class="bank-modal-value bank-modal-amount">5.950.000đ</span>
+            </div>
+            <div class="bank-modal-row">
+              <span class="bank-modal-label">Nội dung:</span>
+              <span class="bank-modal-value bank-modal-note" id="modalTransferNote">Họ tên + SĐT + AI AGENT</span>
+            </div>
+
+            <div class="bank-modal-zalo">
+              <p>Sau khi chuyển khoản, hãy bấm vào đây để vào nhóm hỗ trợ và nhận sản phẩm:</p>
+              <a href="https://zalo.me/g/rejodn580" target="_blank" class="zalo-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                  <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17.47 14.86C17.06 15.17 16.51 15.42 15.82 15.6C15.13 15.78 14.33 15.87 13.43 15.87H10.57V17.5H8.86V6.5H13.43C14.33 6.5 15.13 6.59 15.82 6.77C16.51 6.95 17.06 7.2 17.47 7.51C17.88 7.82 18.17 8.21 18.34 8.68C18.51 9.15 18.6 9.7 18.6 10.33C18.6 10.96 18.51 11.51 18.34 11.98C18.17 12.45 17.88 12.84 17.47 13.15C17.88 13.46 18.17 13.85 18.34 14.32C18.51 14.79 18.6 15.34 18.6 15.97C18.6 16.6 18.51 17.15 18.34 17.62C18.17 18.09 17.88 18.48 17.47 18.79V14.86Z"/>
+                </svg>
+                VÀO NHÓM ZALO HỖ TRỢ
+              </a>
+            </div>
+
+            <div class="bank-modal-hotline">
+              <span>📞 Hotline hỗ trợ: </span>
+              <a href="tel:0399174993">0399.174.993</a>
+            </div>
+          </div>
+          <div class="bank-modal-qr">
+            <p>Quét mã để thanh toán nhanh</p>
+            <img src="ảnh QR.jpg" alt="QR Code chuyển khoản">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       SCRIPTS
+       ════════════════════════════════════════════ -->
   <script>
     /* ── Scroll Reveal Animation ── */
     const revealElements = document.querySelectorAll('.reveal');
@@ -1096,7 +1158,49 @@
       `;
       document.head.appendChild(style);
     })();
-  </script>
 
+    /* ── Handle Modal ── */
+    const checkoutForm = document.getElementById('checkoutForm');
+    const bankModal = document.getElementById('bankModalOverlay');
+    const bankModalClose = document.getElementById('bankModalClose');
+
+    if (checkoutForm) {
+      checkoutForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Update transfer note with name and phone
+        const fullNameInput = document.getElementById('fullName');
+        const phoneInput = document.getElementById('phone');
+        const transferNoteElem = document.getElementById('modalTransferNote');
+        
+        if (transferNoteElem && fullNameInput && phoneInput) {
+            transferNoteElem.textContent = fullNameInput.value + " - " + phoneInput.value + " - AI AGENT";
+        }
+
+        // Show modal
+        if (bankModal) {
+            bankModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+      });
+    }
+
+    if (bankModalClose) {
+      bankModalClose.addEventListener('click', function() {
+        if (bankModal) {
+            bankModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+      });
+    }
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+      if (e.target === bankModal) {
+        bankModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
 </body>
 </html>

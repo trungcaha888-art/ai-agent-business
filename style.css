@@ -1982,3 +1982,223 @@ section {
     padding-bottom: 80px;
   }
 }
+
+/* ================================================
+   MODAL STYLES
+   ================================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--bg-card);
+  width: 100%;
+  max-width: 800px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.9) translateY(20px);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 60px rgba(212, 168, 83, 0.1);
+}
+
+.modal-overlay.active .modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.modal-close:hover {
+  background: rgba(212, 168, 83, 0.1);
+  color: var(--gold);
+  border-color: var(--gold);
+  transform: rotate(90deg);
+}
+
+.bank-modal-body {
+  padding: 60px 40px;
+}
+
+.bank-modal-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.bank-modal-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.bank-modal-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.bank-modal-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.bank-modal-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.bank-modal-info {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-card);
+}
+
+.bank-modal-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bank-modal-row:last-child {
+  border-bottom: none;
+}
+
+.bank-modal-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.bank-modal-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: right;
+}
+
+.bank-modal-account {
+  color: var(--gold);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.bank-modal-amount {
+  color: #ff4444;
+  font-size: 1.1rem;
+}
+
+.bank-modal-qr {
+  text-align: center;
+}
+
+.bank-modal-qr p {
+  font-size: 0.85rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bank-modal-qr img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: var(--radius-md);
+  border: 4px solid var(--bg-card);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.bank-modal-zalo {
+  margin-top: 24px;
+}
+
+.bank-modal-zalo p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.zalo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #0068ff;
+  color: white;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 104, 255, 0.3);
+}
+
+.zalo-btn:hover {
+  background: #0056d6;
+  transform: translateY(-2px);
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 104, 255, 0.4);
+}
+
+.bank-modal-hotline {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.bank-modal-hotline a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .bank-modal-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .bank-modal-body {
+    padding: 40px 20px;
+  }
+  .bank-modal-header h3 {
+    font-size: 1.6rem;
+  }
+}
